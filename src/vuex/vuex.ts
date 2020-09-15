@@ -2,7 +2,7 @@
  * vuex-storeg
  */
 
-import { ConvertArrToEnum } from '../';
+import { ConvertArrToEnum } from '@fatesigner/utils';
 
 import { IVuexActions, IVuexGetters, IVuexMutations, IVuexStore } from './type';
 

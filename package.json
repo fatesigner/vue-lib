@@ -1,6 +1,6 @@
 {
   "name": "@fatesigner/vue-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vue组件库.",
   "license": "MIT",
   "keywords": [
@@ -29,12 +29,14 @@
   },
   "peerDependencies": {
     "@fatesigner/typed": "^1.0.0",
+    "@fatesigner/utils": "^1.0.0",
     "vue": "^2.0.0",
     "vuex": "^3.0.0",
     "vue-property-decorator": "^7.0.0 || ^8.0.0 || ^9.0.0"
   },
   "devDependencies": {
     "@fatesigner/typed": "1.0.1",
+    "@fatesigner/utils": "1.5.0",
     "@types/gulp": "3.8.36",
     "@types/jest": "23.3.12",
     "@types/node": "10.12.18",
