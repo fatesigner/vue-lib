@@ -11,7 +11,7 @@ import { VNode } from 'vue/types/vnode';
  * @param data
  * @constructor
  */
-export function DispatchEvent(vnode: VNode, eventName: string, data: any) {
+export function dispatchEvent(vnode: VNode, eventName: string, data: any) {
   const handlers: any = (vnode.data && vnode.data.on) || (vnode.componentOptions && vnode.componentOptions.listeners);
 
   if (handlers && handlers[eventName]) {

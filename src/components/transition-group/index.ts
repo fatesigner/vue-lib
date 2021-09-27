@@ -2,7 +2,5 @@
  * index
  */
 
-import TransitionGroupSlide from './Slide.vue';
-import TransitionGroupZoom from './Zoom.vue';
-
-export { TransitionGroupSlide, TransitionGroupZoom };
+export { default as TransitionGroupSlide } from './slide.vue';
+export { default as TransitionGroupZoom } from './zoom.vue';

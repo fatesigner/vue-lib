@@ -3,9 +3,9 @@
  * 保存滚动条位置
  */
 
-import {VueConstructor} from 'vue';
+import { VueConstructor } from 'vue';
 
-export function ScrollAlive(vue: VueConstructor): void {
+export function scrollAlive(vue: VueConstructor): void {
   vue.mixin({
     data() {
       return {

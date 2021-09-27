@@ -38,11 +38,7 @@ export interface IVuexActionContext<TState, TRootState> {
 }
 
 // 定义 action 处理函数
-export type IVuexActionHandler<TState, TRootState> = (
-  this: Store<TRootState>,
-  injectee: IVuexActionContext<TState, TRootState>,
-  payload?: any
-) => any;
+export type IVuexActionHandler<TState, TRootState> = (this: Store<TRootState>, injectee: IVuexActionContext<TState, TRootState>, payload?: any) => any;
 
 // 定义 action root 对象
 export interface IVuexActionObject<TState, TRootState> {
@@ -50,16 +46,9 @@ export interface IVuexActionObject<TState, TRootState> {
   handler: IVuexActionHandler<TState, TRootState>;
 }
 
-export type IVuexAction<TState, TRootState> =
-  | IVuexActionHandler<TState, TRootState>
-  | IVuexActionObject<TState, TRootState>;
+export type IVuexAction<TState, TRootState> = IVuexActionHandler<TState, TRootState> | IVuexActionObject<TState, TRootState>;
 
-export type IVuexGetter<TState, TRootState> = (
-  state: TState,
-  getters: any,
-  rootState: TRootState,
-  rootGetters: any
-) => any;
+export type IVuexGetter<TState, TRootState> = (state: TState, getters: any, rootState: TRootState, rootGetters: any) => any;
 
 export type IVuexMutation<TState> = (state: TState, payload?: any) => any;
 

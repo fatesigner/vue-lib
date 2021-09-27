@@ -13,7 +13,7 @@ export const ANNOTATIONS = '__annotations__';
 export const PARAMETERS = '__parameters__';
 export const PROP_METADATA = '__prop__metadata__';
 
-function MakeMetadataCtor(props?: (...args: any[]) => any): any {
+function makeMetadataCtor(props?: (...args: any[]) => any): any {
   return function ctor(this: any, ...args: any[]) {
     if (props) {
       const values = props(...args);
@@ -24,14 +24,14 @@ function MakeMetadataCtor(props?: (...args: any[]) => any): any {
   };
 }
 
-export function MakePropDecorator(
+export function makePropDecorator(
   name: string,
   props?: (...args: any[]) => any,
   parentClass?: any,
   additionalProcessing?: (target: any, name: string, ...args: any[]) => void
 ): any {
   return NoSideEffects(() => {
-    const metaCtor = MakeMetadataCtor(props);
+    const metaCtor = makeMetadataCtor(props);
 
     function PropDecoratorFactory(this: unknown | typeof PropDecoratorFactory, ...args: any[]): any {
       if (this instanceof PropDecoratorFactory) {
@@ -78,7 +78,7 @@ export function MakeDecorator<T>(
   typeFn?: (type: Type<T>, ...args: any[]) => void
 ): { new (...args: any[]): any; (...args: any[]): any; (...args: any[]): (cls: any) => any } {
   return NoSideEffects(() => {
-    const metaCtor = MakeMetadataCtor(props);
+    const metaCtor = makeMetadataCtor(props);
 
     function DecoratorFactory(this: unknown | typeof DecoratorFactory, ...args: any[]): (cls: Type<T>) => any {
       if (this instanceof DecoratorFactory) {
@@ -116,7 +116,7 @@ export function MakeDecorator<T>(
 
 export function MakeParamDecorator(name: string, props?: (...args: any[]) => any, parentClass?: any): any {
   return NoSideEffects(() => {
-    const metaCtor = MakeMetadataCtor(props);
+    const metaCtor = makeMetadataCtor(props);
     function ParamDecoratorFactory(this: unknown | typeof ParamDecoratorFactory, ...args: any[]): any {
       if (this instanceof ParamDecoratorFactory) {
         metaCtor.apply(this, args);

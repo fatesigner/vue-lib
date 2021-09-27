@@ -23,9 +23,9 @@ function storeDecoratorFactory(opts?: VuexModuleMetadata) {
   };
 }
 
-export function Store(opts: VuexModuleMetadata): ClassDecorator;
-export function Store<C>(target: C): C;
-export function Store(opts?: VuexModuleMetadata | FunctionType) {
+export function store(opts: VuexModuleMetadata): ClassDecorator;
+export function store<C>(target: C): C;
+export function store(opts?: VuexModuleMetadata | FunctionType) {
   if (Object.prototype.toString.call(opts) === '[object Function]') {
     return storeDecoratorFactory()(opts as FunctionType);
   } else {

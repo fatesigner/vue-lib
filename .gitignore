@@ -11,7 +11,7 @@ release.md
 /.nyc_output
 /coverage
 /mochawesome-report
-/test/**/dist
+/tests/**/dist
 coverage.lcov
 .npmpublish.md
 

@@ -15,10 +15,7 @@ export type IVueCompProps = Record<string, any>;
 
 export type IVueCompMethods<TContext extends IVueCompContext> = Record<string, (this: TContext, ...args: any[]) => any>;
 
-export type IVueCompListeners<TContext extends IVueCompContext> = Record<
-  string,
-  (this: TContext, ...args: any[]) => any
->;
+export type IVueCompListeners<TContext extends IVueCompContext> = Record<string, (this: TContext, ...args: any[]) => any>;
 
 export interface IVueCompOptions<
   TGetContext extends IVueCompGetContext<IVueCompContext> = IVueCompGetContext<IVueCompContext>,

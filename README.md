@@ -1,15 +1,21 @@
 # vue-lib
 
-[![build][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
 [![download][download-image]][download-url]
+[![commitizen][commitizen-image]][commitizen-url]
+[![prettier][prettier-image]][prettier-url]
+[![semantic][semantic-image]][semantic-url]
 
-[npm-image]: https://img.shields.io/npm/v/@fatesigner/vue-lib.svg?color=green&style=flat-square
+[npm-image]: https://img.shields.io/npm/v/@fatesigner/vue-lib.svg?style=flat-square&logo=npm
 [npm-url]: https://npmjs.com/package/@fatesigner/vue-lib
-[travis-image]: https://travis-ci.com/fatesigner/vue-lib.svg?branch=master&color=success&style=flat-square
-[travis-url]: https://travis-ci.com/fatesigner/vue-lib
+[prettier-image]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square&logo=prettier
+[prettier-url]: https://github.com/prettier/prettier
 [download-image]: https://img.shields.io/npm/dw/@fatesigner/vue-lib.svg?style=flat-square
 [download-url]: https://npmjs.com/package/@fatesigner/vue-lib
+[commitizen-image]: https://img.shields.io/badge/commitizen-friendly-green.svg?style=flat-square
+[commitizen-url]: http://commitizen.github.io/cz-cli/
+[semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square&color=9cf
+[semantic-url]: https://opensource.org/licenses/MIT
 
 Vue组件库.
 

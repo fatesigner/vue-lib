@@ -6,7 +6,7 @@
 import { VNode, VueConstructor } from 'vue';
 import { DirectiveBinding } from 'vue/types/options';
 
-export function DynamicEvents(vue: VueConstructor): void {
+export function dynamicEvents(vue: VueConstructor): void {
   vue.directive('dynamicEvents', {
     bind(el: HTMLElement, binding: DirectiveBinding, vnode: VNode) {
       const { events, listener } = binding.value;

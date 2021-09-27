@@ -2,8 +2,6 @@
  * index
  */
 
-import TransitionCollapse from './Collapse.vue';
-import TransitionSlide from './Slide.vue';
-import TransitionZoom from './Zoom.vue';
-
-export { TransitionCollapse, TransitionSlide, TransitionZoom };
+export { default as TransitionCollapse } from './collapse.vue';
+export { default as TransitionSlide } from './slide.vue';
+export { default as TransitionZoom } from './zoom.vue';

@@ -2,11 +2,11 @@
  * vuex-storeg
  */
 
-import { ConvertArrToEnum } from '@fatesigner/utils';
+import { convertArrToEnum } from '@fatesigner/utils';
 
 import { IVuexActions, IVuexGetters, IVuexMutations, IVuexStore } from './type';
 
-export function CreateVuexStore<
+export function createVuexStore<
   TState extends { [key in string]: any },
   TRootState extends { [key in string]: any },
   TActions extends IVuexActions<TState, TRootState>,
@@ -44,15 +44,15 @@ export function CreateVuexStore<
   }
 
   if (store.actions) {
-    res.actionKeys = ConvertArrToEnum(Object.keys(store.actions), (key: any) => `${name}${key}`) as any;
+    res.actionKeys = convertArrToEnum(Object.keys(store.actions), (key: any) => `${name}${key}`) as any;
   }
 
   if (store.getters) {
-    res.getterKeys = ConvertArrToEnum(Object.keys(store.getters), (key: any) => `${name}${key}`) as any;
+    res.getterKeys = convertArrToEnum(Object.keys(store.getters), (key: any) => `${name}${key}`) as any;
   }
 
   if (store.mutations) {
-    res.mutationKeys = ConvertArrToEnum(Object.keys(store.mutations), (key: any) => `${name}${key}`) as any;
+    res.mutationKeys = convertArrToEnum(Object.keys(store.mutations), (key: any) => `${name}${key}`) as any;
   }
 
   return res;
